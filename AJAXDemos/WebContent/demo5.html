@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script  src="https://code.jquery.com/jquery-1.12.4.min.js">   
+	</script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+	
+	$.ajax({
+		url:"demo.txt",
+		success:function(data,status){
+			$("#test").html(data);
+		}
+	});
+});
+});
+</script>
+</head>
+<body>
+<button>Get Message</button>
+<div id="test"></div>
+</body>
+</html>

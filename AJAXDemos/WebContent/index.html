@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var ajaxobj;
+	function changeText() {
+		if (window.XMLHttpRequest) {
+			ajaxobj = new XMLHttpRequest();
+		} else
+			ajaxobj = new ActiveXObject(Micrsoft.XMLHTTP);
+		alert(ajaxobj.readyState);
+		ajaxobj.open("GET", "demo.txt", true);
+		alert(ajaxobj.readyState);
+		ajaxobj.send();
+		ajaxobj.onreadystatechange = function() {
+			alert(ajaxobj.readyState);
+			if (ajaxobj.readyState == 4 && ajaxobj.status == 200) {
+				document.getElementById("val").innerHTML = ajaxobj.responseText;
+			}
+		}
+
+	}
+</script>
+</head>
+<body>
+	<div id="val"></div>
+	<input type="button" onclick="changeText()" value="click here">
+</body>
+</html>
