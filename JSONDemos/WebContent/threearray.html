@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+employees=[{name:'Rama Krishna',city:'Bangalore',mobile:7654323456,salary:234455},
+           {name:'Rama',city:'Chennai',mobile:7689076543,salary:230000},
+           {name:'Rama',city:'Chennai',mobile:5643266789,salary:560000},
+           {name:'Roy',city:'Chennai',mobile:1234565432,salary:6788888}]
+           
+           for (var v in employees){
+        	   document.write("Name ":+employees[v].name+"<br>");
+        	   document.write("City ":+employees[v].city+"<br>");
+        	   document.write("Mobile ":+employees[v].mobile+"<br>");
+        	   document.write("Salary ":+employees[v].salary+"<br>");
+           }
+           document.write("<br>JSON String <br>");
+           var jarrstring=JSON.stringify(employees);
+           document.write(jarrstring+"<br>");
+           var total={
+        		   bookarray:employees
+           }
+           document.write(JSON.stringify(total)+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>
