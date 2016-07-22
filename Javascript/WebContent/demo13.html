@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function fun1(){
+	if(document.getElementById("uname").value==" "){
+		alert("enter your name");
+		document.myform.uname.focus();
+	}else if(document.getElementById("password").value==" "){
+		alert("enter your password");
+		document.myform.uname.focus();
+	}else if(document.getElementById("gen1").checked=="" &&
+			document.getElementById("gen2").checked==""){
+		alert("enter gender");
+		document.myform.gender[0].focus();
+	}else{
+		alert("you are registered");
+		document.myform.submit();
+	}
+}
+</script>
+</head>
+<body>
+<form action="demo1.html" method="post" name="myform">
+       Name<input type="text" name="username" id="uname">
+       Password<input type="password" id="password" name="password"/><br>
+       Gender MALE<input type="radio" name="gender" id="gen1" value="Male" checked="checked"/><br> 
+              FEMALE<input type="radio" name="gender" id="gen2" value="Female"/>
+              <input type="button" onclick="fun1()" value="press here">
+   </form>        
+</body>
+</html>

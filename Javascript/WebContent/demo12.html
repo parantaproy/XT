@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+function call() {
+	String name1=["parantap","kiran","sharad","raju"];
+	name=document.getElementById("space").value;
+	boolean flag=false;
+	for(var i=0;i<name.length;i++) {
+		if(name==name1[i]) {
+			document.getElementById("mydiv").innerHTML="welcome "+name;
+			break;
+			
+			
+		}
+	}if (flag){
+			document.getElementById("mydiv").innerHTML=" ";
+		}
+		
+		
+	}
+
+</script>
+</head>
+<body>
+<input type="text" id="space" value="name">
+<input type="button" onclick="call()" value="press here">
+<div id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+var arr=[16,9,33,264,45,86];
+
+for (var i=0;i<arr.length;i++){
+	document.write(arr[i]+" ");
+}
+document.write("<br reversing array ");
+arr.reverse();
+document.write(arr);
+document.write("<br sorting array ");
+arr.sort();
+document.write(arr+"<br>");
+
+arr1=[16,9,33,264,45,86];
+arr1.sort(mysortfunc);
+function mysortfunc(a,b){
+	return a-b;
+	}
+	document.write("<br>");
+	document.write(arr1+"<br>");
+	document.write("<br>increasing array size");
+	//increasing array size
+	arr.length=20;
+	arr[3]=15;
+	for(var i=0;i<arr.length;i++){
+		document.write(arr[i]+"<br>");
+	}
+	var newarr=new Array(4);
+	newarr[0]="Roy";
+	newarr[1]="Jay";
+	newarr[2]="Dhur";
+	newarr[3]="Turya";
+	newarr[9]="Bose";
+	for(var i=0;i<newarr.length;i++){
+		document.write("<br>"+newarr[i]);
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

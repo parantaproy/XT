@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var book=prompt("Enter the book name"," ");
+alert(isNaN(book))
+if(!isNaN(book)) {
+	document.write("<b> enter a bookname</b>");
+}	
+ if(book.toUpperCase()=="JAVA"){
+	document.write(book +" ");
+	
+}else if(book.toUpperCase()=="JSP") {
+	document.write(book + "is the same");
+}else if(book.toUpperCase()=="SPRING"){
+	document.write(book +" ");
+}
+else{
+	document.write("no book");
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Using onload and unload</title>
+<script type="text/javascript">
+var name=prompt("your name","");
+alert("hi "+name);
+document.write("The name you typed is "+name)
+
+</script>
+</head>
+<body onload="alert('welcome '+name)"
+onUnLoad="alert('Goodbye '+name+' Please come again')">
+<h3><i>This page demonstrates load and unload</i></h3>
+
+</body>
+</html>
