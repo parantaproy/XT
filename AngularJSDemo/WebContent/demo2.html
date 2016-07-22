@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+</head>
+<body>
+<div ng-init="employees=[{name:'Rama Krishna',city:'Bangalore',mobile:7654323456,salary:234455},
+                           {name:'Rama',city:'Chennai',mobile:7689076543,salary:230000},
+                           {name:'Rama',city:'Chennai',mobile:5643266789,salary:560000},
+                           {name:'Roy',city:'Chennai',mobile:1234565432,salary:6788888},
+                           {name:'Parantap',city:'Bangalore',mobile:56558585875,salary:7647646},
+                           {name:'Jay',city:'Hyderabad',mobile:64646458585,salary:7555558}]"></div>
+<ul>                           
+<li ng-repeat= "emp in employees">
+{{emp|json}}
+</li>       
+</ul> 
+<ul>
+<li ng-repeat="emp in employees">
+Name:{{emp.name|uppercase}}
+City:{{emp.city|lowercase}}
+Salary:{{emp.salary|currency:'Rs'}}
+Mobile:{{emp.mobile|number}}</li>
+
+</ul>
+<ul><li ng-repeat="emp in employees|orderBy:'mobile'">
+Name:{{emp.name+" "City "+emp.city}}</li>
+</ul>                   
+<ul><li ng-repeat="emp in employees|orderBy:'-name'">
+Name:{{emp.name|uppercase}} City:{{emp.city|lowercase}}</li>
+</ul>
+<input type="text" ng-model="choice">
+</body>
+</html>

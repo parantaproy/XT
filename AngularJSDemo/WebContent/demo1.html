@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+</head>
+<body ng-app>
+<input type="text" ng-model="fname"/>
+Hello<b ng-bind="fname"><br></b>Welcome{{fname}}<br>
+{{"hello"+"world"}}
+{{1+2}}
+<br>
+<input type="number" ng-model="salary"/>
+<input type="number" ng-model="bonus"/>
+<p ng-bind="salary*bonus"></p>
+{{salary*bonus}}
+</body>
+</html>
