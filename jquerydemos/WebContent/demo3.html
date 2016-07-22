@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script  src="https://code.jquery.com/jquery-1.12.4.min.js">   
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("p").click(function(){
+			$('h1').hide();
+		});
+		$('#test').click(function(){
+		$('h1').show();
+		$(this).text('Text is formatted').css({'color':'red'});
+		$("#test1").html('Text is not formatted');
+		});
+		});
+	</script>
+</head>
+<body>
+<p>Click to hide the header</p>
+<h1>Hello World</h1>
+
+<div id="test">show</div>
+<div id="test1"></div>
+</body>
+</html>
